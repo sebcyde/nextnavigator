@@ -6,7 +6,7 @@
 	"publisher": "Sebastian",
 	"version": "0.0.1",
 	"engines": {
-		"vscode": "^1.86.0"
+		"vscode": "^1.85.1"
 	},
 	"categories": [
 		"Other"
@@ -17,8 +17,7 @@
 		"commands": [
 			{
 				"command": "nextnavigator.runNavigator",
-				"title": "Navigate!",
-				"shortTitle": "Navigate!"
+				"title": "Navigate!"
 			}
 		]
 	},
