@@ -14,7 +14,19 @@ const getFilesInWorkspace = async () => {
 		"**/node_modules/**"
 	);
 
-	return allFiles.map(file => {
+	let allowed = ["jsx", "tsx", "css", "scss", "js"];
+
+	let filtered = allFiles.filter(C => {
+		let splitVersion = C.path.split("/");
+		let last = splitVersion.length - 1;
+
+		return (
+			allowed.includes(splitVersion[last].split(".")[1]) ||
+			allowed.includes(splitVersion[last].split(".")[2])
+		);
+	});
+
+	return filtered.map(file => {
 		let splitVersion = file.path.split("/");
 
 		return {
